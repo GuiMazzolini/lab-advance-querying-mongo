@@ -62,7 +62,7 @@
 
 **FILTER** {"acquisition.acquired_year": {$gte: 2010}}
 **PROJECT** {name:1, acquisition:1}
-**SORT** {"acquisition.price_amount": -1}
+**SORT** {"acquisition.price_amount": 1}
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
@@ -73,7 +73,7 @@
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
 **FILTER** {founded_day: {$lte: 7}}
-**SORT**  {"acquisition.price_amount":-1}
+**SORT**  {"acquisition.price_amount":1}
 **LIMIT** 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
